@@ -153,6 +153,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">automol.util</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heuristic.html">automol.heuristic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matrix.html">automol.matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">automol.ring</a></li>
 </ul>
 
     </div>
@@ -335,13 +336,14 @@ document.write(`
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.breakby">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">breakby</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.breakby" title="Link to this definition">#</a></dt>
-<dd><p>Break a list by element, dropping the element itself.</p>
-<p>Analogous to ‘&lt;char&gt;’.split(‘&lt;string&gt;’) for strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>]</span></p>
-</dd>
-</dl>
+<dd><p>Break a list by element, dropping the element itself.
+Analogous to ‘&lt;char&gt;’.split(‘&lt;string&gt;’) for strings.
+:type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>
+:param lst: The list
+:type elem: 
+:param elem: The element to break the list by, gets deleted
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>]</span>
+:return:The chunks between the break points of the input list</p>
 </dd></dl>
 
 <dl class="py function">
@@ -370,13 +372,12 @@ that a, b, and c still end up in the same class</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.flatten">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.flatten" title="Link to this definition">#</a></dt>
-<dd><p>Flatten an arbitrarily nested list of lists (iterator).</p>
-<p>Source: <a class="reference external" href="https://stackoverflow.com/a/2158532">https://stackoverflow.com/a/2158532</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a></span></p>
-</dd>
-</dl>
+<dd><p>Flatten an arbitrarily nested list of lists (iterator).
+Source: <a class="reference external" href="https://stackoverflow.com/a/2158532">https://stackoverflow.com/a/2158532</a> .
+:type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a></span>
+:param lst: An arbitrarily nested list or tuple
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a></span>
+:return: An iterator over the flattened list of values</p>
 </dd></dl>
 
 <dl class="py function">
@@ -401,8 +402,8 @@ that a, b, and c still end up in the same class</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>seq1</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></span>) – The first sequence</p></li>
-<li><p><strong>seq2</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></span>) – The second sequence, which must be a permuation of the first</p></li>
+<li><p><strong>seq1</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>) – The first sequence</p></li>
+<li><p><strong>seq2</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>) – The second sequence, which must be a permuation of the first</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -524,18 +525,23 @@ that a, b, and c still end up in the same class</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.scale_iterable">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">scale_iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.scale_iterable" title="Link to this definition">#</a></dt>
-<dd><p>Scale some type of iterable of floats by a scale factor.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span></p>
-</dd>
-</dl>
+<dd><p>Scale some type of iterable of floats by a scale factor.
+:type iterable: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>
+:param iterable: A list of numbers. 
+:type scale_factor: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>
+:param scale_factor: A factor to scale by.
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>
+:return:</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.separate_negatives">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">separate_negatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.separate_negatives" title="Link to this definition">#</a></dt>
-<dd><p>Seperate a list of numbers into negative and nonnegative (&gt;= 0).</p>
+<dd><p>Seperate a list of numbers into negative and nonnegative (&gt;= 0).
+:type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>
+:param lst: The list
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>]</span>
+:return: Value for negatives and for positives.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -586,12 +592,15 @@ dropped if the user specifies not to include it.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.value_similar_to">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">value_similar_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.value_similar_to" title="Link to this definition">#</a></dt>
-<dd><p>Check if a value is close to some lst of values within some threshold.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
-</dd>
-</dl>
+<dd><p>Check if a value is close to any one of a list of values.
+:type val: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>
+:param val: A number.
+:type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>
+:param lst: A collection of numbers to compare to.
+:type thresh: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>
+:param thresh: The comparison threshold.
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>
+:return: ‘True’ if close, ‘False’ if not.</p>
 </dd></dl>
 
 </section>

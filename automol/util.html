@@ -323,7 +323,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.matrix.string"><code class="docutils literal notranslate"><span class="pre">string()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automol-ring">automol.ring</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automol-util-ring">automol.util.ring</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle"><code class="docutils literal notranslate"><span class="pre">cycle()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle_item_to_front"><code class="docutils literal notranslate"><span class="pre">cycle_item_to_front()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle_items_to_back"><code class="docutils literal notranslate"><span class="pre">cycle_items_to_back()</span></code></a></li>
@@ -333,6 +333,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.distance"><code class="docutils literal notranslate"><span class="pre">distance()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.edges"><code class="docutils literal notranslate"><span class="pre">edges()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.normalize"><code class="docutils literal notranslate"><span class="pre">normalize()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-automol.util.tensor">automol.util.tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.build_full_array"><code class="docutils literal notranslate"><span class="pre">build_full_array()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.from_string"><code class="docutils literal notranslate"><span class="pre">from_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string"><code class="docutils literal notranslate"><span class="pre">string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string_submat_3d"><code class="docutils literal notranslate"><span class="pre">string_submat_3d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string_submat_4d"><code class="docutils literal notranslate"><span class="pre">string_submat_4d()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -703,8 +711,8 @@ radii, and (b.) the average vdw radius.</p>
 </dd></dl>
 
 </section>
-<section id="automol-ring">
-<h2>automol.ring<a class="headerlink" href="#automol-ring" title="Link to this heading">#</a></h2>
+<section id="automol-util-ring">
+<h2>automol.util.ring<a class="headerlink" href="#automol-util-ring" title="Link to this heading">#</a></h2>
 <p>some words</p>
 <p id="module-automol.util.ring">Functions for dealing with a list of items encoding a ring.</p>
 <dl class="py function">
@@ -892,6 +900,95 @@ longest distance.</p>
 </dd></dl>
 
 </section>
+<section id="module-automol.util.tensor">
+<span id="automol-util-tensor"></span><h2>automol.util.tensor<a class="headerlink" href="#module-automol.util.tensor" title="Link to this heading">#</a></h2>
+<p>I/O operations for higher dimension matrices of 3 or higher.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="automol.util.tensor.build_full_array">
+<span class="sig-prename descclassname"><span class="pre">automol.util.tensor.</span></span><span class="sig-name descname"><span class="pre">build_full_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_idxs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_perms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.tensor.build_full_array" title="Link to this definition">#</a></dt>
+<dd><p>Function to fill out the array with avail
+caps: (</p>
+<blockquote>
+<div><p>((idx1, idx2, …, idxn), val1),
+((idx1, idx2, …, idxn), val2),
+…,
+((idx1, idx2, …, idxn), valn),</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="automol.util.tensor.from_string">
+<span class="sig-prename descclassname"><span class="pre">automol.util.tensor.</span></span><span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_perms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.tensor.from_string" title="Link to this definition">#</a></dt>
+<dd><p>Write a higher dimensional array (3 or more) to a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr_str</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – string containing higher dimensions matrix</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Array of high dimension matrix</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Format of input string:</dt><dd><p>idx1 idx2 .. idxn  val1
+idx1 idx2 .. idxn  valn</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="automol.util.tensor.string">
+<span class="sig-prename descclassname"><span class="pre">automol.util.tensor.</span></span><span class="sig-name descname"><span class="pre">string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_perms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{0:&gt;16.8f}'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.tensor.string" title="Link to this definition">#</a></dt>
+<dd><p>Write a higher dimensional array (3 or more) to a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arr</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span>) – higher dimensions matrix</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Numbers in a string</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Format of output string:</dt><dd><p>idx1 idx2 .. idxn  val1
+idx1 idx2 .. idxn  valn</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="automol.util.tensor.string_submat_3d">
+<span class="sig-prename descclassname"><span class="pre">automol.util.tensor.</span></span><span class="sig-name descname"><span class="pre">string_submat_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.tensor.string_submat_3d" title="Link to this definition">#</a></dt>
+<dd><p>Writes a 3-dimensional matrix to a unique string format</p>
+<dl class="simple">
+<dt>idx1</dt><dd><p>2d submat1</p>
+</dd>
+<dt>idx2</dt><dd><p>2d submat2</p>
+</dd>
+<dt>idxn</dt><dd><p>2d submatn</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="automol.util.tensor.string_submat_4d">
+<span class="sig-prename descclassname"><span class="pre">automol.util.tensor.</span></span><span class="sig-name descname"><span class="pre">string_submat_4d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.tensor.string_submat_4d" title="Link to this definition">#</a></dt>
+<dd><p>Writes a 4-dimensional matrix to a unique string format</p>
+<dl class="simple">
+<dt>idx1</dt><dd><p>2d submat1</p>
+</dd>
+<dt>idx2</dt><dd><p>2d submat2</p>
+</dd>
+<dt>idxn</dt><dd><p>2d submatn</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 </section>
 
 
@@ -955,7 +1052,7 @@ longest distance.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.matrix.string"><code class="docutils literal notranslate"><span class="pre">string()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automol-ring">automol.ring</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automol-util-ring">automol.util.ring</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle"><code class="docutils literal notranslate"><span class="pre">cycle()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle_item_to_front"><code class="docutils literal notranslate"><span class="pre">cycle_item_to_front()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.cycle_items_to_back"><code class="docutils literal notranslate"><span class="pre">cycle_items_to_back()</span></code></a></li>
@@ -965,6 +1062,14 @@ longest distance.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.distance"><code class="docutils literal notranslate"><span class="pre">distance()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.edges"><code class="docutils literal notranslate"><span class="pre">edges()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.ring.normalize"><code class="docutils literal notranslate"><span class="pre">normalize()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-automol.util.tensor">automol.util.tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.build_full_array"><code class="docutils literal notranslate"><span class="pre">build_full_array()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.from_string"><code class="docutils literal notranslate"><span class="pre">from_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string"><code class="docutils literal notranslate"><span class="pre">string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string_submat_3d"><code class="docutils literal notranslate"><span class="pre">string_submat_3d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automol.util.tensor.string_submat_4d"><code class="docutils literal notranslate"><span class="pre">string_submat_4d()</span></code></a></li>
 </ul>
 </li>
 </ul>

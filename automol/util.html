@@ -343,7 +343,7 @@ Analogous to ‘&lt;char&gt;’.split(‘&lt;string&gt;’) for strings.
 :type elem: 
 :param elem: The element to break the list by, gets deleted
 :rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>]</span>
-:return:The chunks between the break points of the input list</p>
+:return:The chunks between the break points of the input list.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -377,7 +377,7 @@ Source: <a class="reference external" href="https://stackoverflow.com/a/2158532"
 :type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a></span>
 :param lst: An arbitrarily nested list or tuple
 :rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a></span>
-:return: An iterator over the flattened list of values</p>
+:return: An iterator over the flattened list of values.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -519,7 +519,13 @@ Source: <a class="reference external" href="https://stackoverflow.com/a/2158532"
 <dl class="py function">
 <dt class="sig sig-object py" id="automol.util.remove_duplicates_with_order">
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">remove_duplicates_with_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.remove_duplicates_with_order" title="Link to this definition">#</a></dt>
-<dd><p>Remove all duplicates of a list while not reordering the list.</p>
+<dd><p>Remove all duplicates of a list while not reordering the list.
+:type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>
+:param lst: A list.
+:rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>
+:return: A list, without duplicates.
+Note: To be deprecated
+and replaced with calls to more_itertools.unique_justseen.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -527,11 +533,11 @@ Source: <a class="reference external" href="https://stackoverflow.com/a/2158532"
 <span class="sig-prename descclassname"><span class="pre">automol.util.</span></span><span class="sig-name descname"><span class="pre">scale_iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#automol.util.scale_iterable" title="Link to this definition">#</a></dt>
 <dd><p>Scale some type of iterable of floats by a scale factor.
 :type iterable: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>
-:param iterable: A list of numbers. 
+:param iterable: A list of numbers.
 :type scale_factor: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>
 :param scale_factor: A factor to scale by.
 :rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</span>
-:return:</p>
+:return: The scaled list of numbers.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -541,7 +547,7 @@ Source: <a class="reference external" href="https://stackoverflow.com/a/2158532"
 :type lst: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></span>
 :param lst: The list
 :rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>, <a class="reference external" href="https://docs.python.org/3.12/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>]</span>
-:return: Value for negatives and for positives.</p>
+:return: Value for negatives and for non-negatives.</p>
 </dd></dl>
 
 <dl class="py function">
